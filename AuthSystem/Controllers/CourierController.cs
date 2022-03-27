@@ -24,6 +24,11 @@ namespace AuthSystem.Controllers
             return View();
         }
 
+        public IActionResult Select()
+        {
+            return View();
+        }
+
         public IActionResult Generate(string productId)
         {
             ViewBag.productId = productId;

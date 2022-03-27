@@ -221,3 +221,4 @@ D:\Projects\TestCPTracker\AuthSystem\AuthSystem\obj\Debug\netcoreapp3.1\Razor\Vi
 D:\Projects\TestCPTracker\AuthSystem\AuthSystem\obj\Debug\netcoreapp3.1\Razor\Views\Parcels\Details.cshtml.g.cs
 D:\Projects\TestCPTracker\AuthSystem\AuthSystem\obj\Debug\netcoreapp3.1\Razor\Views\Parcels\Edit.cshtml.g.cs
 D:\Projects\TestCPTracker\AuthSystem\AuthSystem\obj\Debug\netcoreapp3.1\Razor\Views\Parcels\Index.cshtml.g.cs
+D:\Projects\TestCPTracker\AuthSystem\AuthSystem\obj\Debug\netcoreapp3.1\Razor\Views\Courier\Select.cshtml.g.cs
