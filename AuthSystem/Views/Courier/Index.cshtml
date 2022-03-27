@@ -9,12 +9,7 @@
         document.write(d);
     }*@
 
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+<!----<style>
 
     button {
         background-color: #54fdae;
@@ -37,7 +32,7 @@
         margin: 10px;
         outline: 0;
     }
-</style>
+</style>---->
 
 <script>
     function uuid() {
@@ -72,7 +67,7 @@
 
 <!---Click button to generate UUID and then copy the --->
 
-<button id="button" onclick="getElementById('random-number').value = new Date().getTime().toString()">Create Random Number</button>
+<button class="btn btn-primary" id="button" onclick="getElementById('random-number').value = new Date().getTime().toString()">Create Random Number</button>
 <br>
 <input id="random-number" value="" />
 
