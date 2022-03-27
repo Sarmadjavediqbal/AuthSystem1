@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="#myDiv">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                @{
+                    Html.RenderPartial("NavMenu");
+                }
+            </div>
+            <div class="col-md-8">
+                <h2>Dashboard</h2>
+                <input class="col-md-10" s type="text" placeholder="Search..">
+                <button class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </button>
+                <div class="container-fluid" style="padding-top: 55px">
+                    <div class="row">
+                        <div class="dropdown col-md-6">
+                            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width: 100% !important; text-align:left">
+                                Filter By
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Name</a>
+                                <a class="dropdown-item" href="#">ID</a>
+                                <a class="dropdown-item" href="#">Email</a>
+                            </div>
+                        </div>
+                        <div class="dropdown col-md-6">
+                            <div class="input-group date" data-provide="datepicker">
+                                <input type="date" class="form-control">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-th"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid" style="padding-top: 100px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button asp-area="" asp-controller="AddressBook" asp-action="CreateContactForm"
+                                    class="btn btn-primary btn-square-md" style=" width: 150px !important;
+                                 max-width: 100% !important; max-height: 100% !important;
+                                 height: 100px !important; text-align: center; padding: 0px;
+                                 font-size: 12px; color: white; border-radius: 12px;">
+                                Create Contact
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <button href="#" class="btn btn-primary btn-square-md" style=" width: 150px !important; max-width: 100% !important; max-height: 100% !important; height: 100px !important; text-align: center; padding: 0px; font-size: 12px;  color: white; border-radius: 12px;">All Items</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button href="#" class=" btn btn-primary btn-square-md" style=" width: 150px !important; max-width: 100% !important; max-height: 100% !important; height: 100px !important; text-align: center; padding: 0px; font-size: 12px;  color: white; border-radius: 12px;">Send Parcel</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button href="#" class="btn btn-primary btn-square-md" style=" width: 150px !important; max-width: 100% !important; max-height: 100% !important; height: 100px !important; text-align: center; padding: 0px; font-size: 12px;  color: white; border-radius: 12px;">Receive Parcel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $.fn.datepicker.defaults.format = "mm/dd/yyyy";
+    $('.datepicker').datepicker({
+        startDate: '-3d'
+    });
+</script>

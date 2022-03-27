@@ -1,0 +1,88 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@*function func() {
+        var d = new Date().getTime().toString();
+        document.write(d);
+    }*@
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    button {
+        background-color: #54fdae;
+        padding: 5px;
+        margin: 10px;
+        border: 0;
+        border-radius: 3px;
+        outline: 0;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #32ee9a;
+        }
+
+    input {
+        border: 0;
+        border-bottom: 1px solid #000;
+        padding: 3px;
+        margin: 10px;
+        outline: 0;
+    }
+</style>
+
+<script>
+    function uuid() {
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
+    var userID = uuid();//something like: "ec0c22fa-f909-48da-92cb-db17ecdb91c5"
+
+    function func() {
+        var d = new Date().getTime().toString();
+        document.write(d);
+    }
+
+</script>
+
+<!---
+
+@*<button id="generateID">Generate ID</button>
+<input type="text" id="generateidtxt" />
+<br />
+<input type="submit" value="DatTime" onclick="getElementById('d')" />
+<input type="text" placeholder="ProductId" name="ProductId" id="d" />*@
+
+
+
+@*Following button gives random uuid*@-->
+
+<button id="button" onclick="getElementById('random-number').value = new Date().getTime().toString()">Create Random Number</button>
+<br>
+<input id="random-number" value="" />
+
+
+
+<form method="post" asp-controller="Courier" asp-action="generate">
+
+
+    <input type="text" placeholder="productId" name="productId" />
+    <input type="submit" value="Generate" />
+</form>
+
+@if (ViewBag.productId != null)
+{
+    <qrcode content="@ViewBag.productId" width="200" height="200" alt="" name="productId" />
+    <barcode content="@ViewBag.productId" width="500" height="50" alt="" name="productId" />
+}

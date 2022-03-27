@@ -1,0 +1,63 @@
+﻿@model AuthSystem.Models.Parcel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Parcel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="parType" class="control-label"></label>
+                <input asp-for="parType" class="form-control" />
+                <span asp-validation-for="parType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="parCategory" class="control-label"></label>
+                <input asp-for="parCategory" class="form-control" />
+                <span asp-validation-for="parCategory" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ItemType" class="control-label"></label>
+                <input asp-for="ItemType" class="form-control" />
+                <span asp-validation-for="ItemType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="parDesc" class="control-label"></label>
+                <input asp-for="parDesc" class="form-control" />
+                <span asp-validation-for="parDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GetDateTime" class="control-label"></label>
+                <input asp-for="GetDateTime" class="form-control" />
+                <span asp-validation-for="GetDateTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BarcodeImage" class="control-label"></label>
+                <input asp-for="BarcodeImage" class="form-control" />
+                <span asp-validation-for="BarcodeImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
